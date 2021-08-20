@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import fakedata from '../src/FakeData/Data.json';
+import { useEffect, useState } from 'react';
+import UserDatas from '../src/Components/userDatas/UserDatas';
+import Header from '../src/Components/Header/Header';
+import Welcome from '../src/Components/WecomeArea/Welcome';
+import Footer from '../src/Components/Footer/Footer';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [userDatas, setUserDatas] = useState([])
+	useEffect(()=>{
+		console.log(fakedata);
+		setUserDatas(userDatas);
+	},[])
+
+	return (
+		<div className="user-wrapper">
+			<Header></Header>
+			<Welcome></Welcome>
+			
+			<p style={{color:"goldenrod", fontSize:"30px", textAlign:"center"}}>Our Team Member</p>
+			{
+				fakedata.map(fakeDataItem => <UserDatas fakeDataItem={fakeDataItem}></UserDatas>)
+			}
+			<Footer></Footer>
+		</div>
+	);
 }
 
 export default App;

@@ -1,0 +1,8 @@
+.Footer-area{
+    display:inline-block;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+    margin-top: 10px
+}

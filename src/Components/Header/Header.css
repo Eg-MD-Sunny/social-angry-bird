@@ -1,0 +1,42 @@
+.header-wrapper{
+    display:flex;
+}
+.logo-area img{
+    width: 100px;
+    height: 100px;
+}
+.text-area{
+    text-transform: uppercase;
+}
+.first{
+    color: rgba(231, 9, 9, 0.5);
+    font-weight: 500;
+    font-size: 18px;
+}
+.second{
+    margin-left: 20px;
+    font-weight: 700;
+    color: #226698;
+}
+.header-wrapper{
+    margin-left: 30px;
+}
+.login-area{
+    margin-left:70%;
+    margin-top: 3%;
+}
+.login-area a{
+    text-decoration:none;
+    color: #000;
+    border: 2px solid #226698;
+    margin-left: 5px;
+    padding: 3px 6px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.login-area a:hover{
+    background-color: #226698;
+    color: #fff;
+    transition: all 0.5s ease;
+}
